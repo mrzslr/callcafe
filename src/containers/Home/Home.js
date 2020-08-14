@@ -1,12 +1,10 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
+import ContentLoader from "components/ContentLoader";
 
 const Home = () => {
   return (
     <div>
-      <Button variant="contained" color="primary">
-        Primary
-      </Button>
+      <ContentLoader />
     </div>
   );
 };
