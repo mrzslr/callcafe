@@ -1,13 +1,19 @@
 import React from "react";
-import styles from './style'
-import headerImg from 'assets/img/header.webp'
-import injectSheet from 'react-jss'
-
-const Header = ({classes}) => {
+import styles from "./style";
+import { ArrowBackIos, Menu } from "@material-ui/icons";
+import injectSheet from "react-jss";
+import CategoryItem from "components/CategoryItem";
+import colors from 'utils/styles/colors'
+const Header = ({ classes }) => {
   return (
     <div>
-      <img src={headerImg} className={classes.headerImg} />
-      <h1>Call Cafe</h1>
+      <div className={classes.toolbar}>
+        <ArrowBackIos style={{color:colors.primaryColor}} />
+        <Menu style={{color:colors.primaryColor}} />
+        
+      </div>
+      
+      <CategoryItem  />
     </div>
   );
 };
