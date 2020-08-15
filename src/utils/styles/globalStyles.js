@@ -7,14 +7,18 @@ const styles = {
     body: {
       backgroundColor: "white !important",
     },
-    
   },
+  "@font-face": [
+    {
+      fontFamily: "dana",
+      src: `url(./fonts/dana/eot/dana-regular.eot)`,
+    },
+   
+  ],
 };
-
 
 export const setupGlobalStyles = () => {
   jss.setup(preset());
-  
 
   const sheetsRegistry = new SheetsRegistry();
 
