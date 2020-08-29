@@ -3,11 +3,13 @@ export default {
         display:'flex',
         alignItems:'center',
         width:'100%',
-        height: '200px',
+        height: 'auto',
         marginRight: '10px',
-        background: '#F1F3F7',
+        background: '#CEB798',
+        color:'#F1F1E5',
         borderRadius: '5px',
         counterIncrement: 'carousel-cell',
+        
         '& :before':{
             display: 'block',
             textAlign: 'center',
@@ -17,12 +19,20 @@ export default {
         }
     },
     cover:{
+        margin:'0 auto',
+        textAlign:'center',
         '& img':{
-            width: '100%'
+            width: '100%',
+            
         }
+        
     },
     title:{
+        fontFamily: 'Mj_Dinar Two Medium',
         fontWeight:'bold',
-        fontSize:'medium'
+        padding:'5px',
+        fontSize:'1.1rem',
+        marginTop:'0',
+        
     }
 }

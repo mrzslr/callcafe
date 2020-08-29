@@ -12,7 +12,7 @@ const ContentLoader = ({ classes }) => {
       <Container>
         <Grid container spacing={3} alignItems="center">
           {coffees.map((product) => (
-            <Grid key={product.key} item xs={6}>
+            <Grid key={product.key} item xs={6} md={4} sm={4}>
               <ProductItem product={product} />
             </Grid>
           ))}

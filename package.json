@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
     "flickity": "^2.2.1",
+    "imports-loader": "^1.1.0",
     "jss": "^10.3.0",
     "jss-preset-default": "^10.3.0",
     "react": "^16.13.1",
