@@ -1,20 +1,26 @@
 import colors from "utils/styles/colors";
 export default {
   container: {
-    marginTop: "1rem",
+    marginTop: 3,
+    marginBottom: 3,
     width: "60px",
     height: "60px",
-    borderRadius: "1rem",
-    border: "solid 3px #F1F3F7",
+    borderRadius: "00.5rem",
     backgroundColor: "whtie",
     transition: "ease-in-out all 0.2s",
-    "&:hover": {
-      backgroundColor: colors.primaryColor,
-      color: colors.white,
-      "& $icon": {
-        filter:
-          "invert(76%) sepia(56%) saturate(3423%) hue-rotate(2deg) brightness(107%) contrast(106%)",
-      },
+  },
+  selected: {
+    marginTop: 3,
+    marginBottom: 3,
+    width: "60px",
+    height: "60px",
+    borderRadius: "00.5rem",
+    backgroundColor: colors.primaryColor,
+    color: colors.white,
+    transition: "ease-in-out all 0.2s",
+    "& $icon": {
+      filter:
+        "invert(76%) sepia(56%) saturate(3423%) hue-rotate(2deg) brightness(107%) contrast(106%)",
     },
   },
   icon: {
