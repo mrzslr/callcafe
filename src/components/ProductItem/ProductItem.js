@@ -8,7 +8,7 @@ const ProductItem = ({ classes, product }) => {
       <div className={classes.cover}>
         <img src={BASE_IMAGE_URL + product.image} />
         <div align="center" className={classes.waveBg}></div>
-        <h1 className={classes.title}>اسپرسو</h1>
+  <h1 className={classes.title}>{product.title}</h1>
       </div>
     </div>
   );

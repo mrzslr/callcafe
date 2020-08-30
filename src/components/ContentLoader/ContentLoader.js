@@ -4,14 +4,16 @@ import injectSheet from "react-jss";
 import Grid from "@material-ui/core/Grid";
 import ProductItem from "components/ProductItem";
 import { Container } from "@material-ui/core";
-import coffees from "data/coffees";
+import categor from "components/CategoryItem";
 
-const ContentLoader = ({ classes }) => {
+const ContentLoader = ({ classes , products  }) => {
+  
   return (
     <div align="center" className={classes.container}>
       <Container>
         <Grid container spacing={3} alignItems="center">
-          {coffees.map((product) => (
+        
+          {products.map((product) => (
             <Grid key={product.key} item xs={6} md={4} sm={4}>
               <ProductItem product={product} />
             </Grid>
