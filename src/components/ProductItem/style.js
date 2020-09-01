@@ -34,7 +34,7 @@ export default {
     fontFamily: 'Mj_Dinar Two Medium',
     fontWeight: 'bold',
     padding: '5px',
-    fontSize: '1.1rem',
+    fontSize: 'large',
     marginTop: '0',
 
   },
