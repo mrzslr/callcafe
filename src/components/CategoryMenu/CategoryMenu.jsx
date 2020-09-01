@@ -2,6 +2,7 @@ import React from 'react';
 import CategoryItem from 'components/CategoryItem';
 import injectSheet from 'react-jss';
 import PropTypes from 'prop-types';
+import Slider from 'components/Slider';
 import styles from './style';
 
 const CategoryMenu = ({
@@ -13,14 +14,22 @@ const CategoryMenu = ({
   return (
     <div className={classes.container}>
       <div className={classes.categoryMenu}>
-        {menu && menu.map((category) => (
-          <CategoryItem
-            onCategoryItemClicked={onCategoryItemClicked}
-            category={category}
-            selected={activeCategory === category.key}
-            key={category.id}
-          />
-        ))}
+        <Slider
+          options={{
+            groupCells: true,
+            prevNextButtons: false,
+            pageDots: false,
+          }}
+        >
+          {menu && menu.map((category) => (
+            <CategoryItem
+              onCategoryItemClicked={onCategoryItemClicked}
+              category={category}
+              selected={activeCategory === category.key}
+              key={category.id}
+            />
+          ))}
+        </Slider>
       </div>
     </div>
   );
