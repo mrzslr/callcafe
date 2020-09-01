@@ -13,4 +13,6 @@ export default {
   secondaryText: colors.nero,
   primaryButtonBackground: colors.primaryButtonColor,
   primaryButtonText: colors.white,
+  categoryItemBg:'#6f4e37',
+  productItemBg:'#CEB798'
 };
