@@ -1,34 +1,36 @@
-import jss from "jss";
-import { SheetsRegistry } from "react-jss";
-import preset from "jss-preset-default";
+import jss from 'jss';
+import { SheetsRegistry } from 'react-jss';
+import preset from 'jss-preset-default';
 
 const styles = {
-  "@global": {
+  '@global': {
     body: {
-      backgroundColor: "whitesmoke !important",
-      margin:0,
-      padding:0
+      backgroundColor: 'whitesmoke !important',
+      margin: 0,
+      padding: 0,
     },
   },
-  "@font-face": [
+  '@font-face': [
     {
-      fontFamily: "dana",
-      src: `url(./fonts/dana/eot/dana-regular.eot)`,
+      fontFamily: 'dana',
+      src: 'url(./fonts/dana/eot/dana-regular.eot)',
       fallbacks: [
-        {src: `url(./fonts/dana/eot/dana-regular.eot?#iefix) format(embedded-opentype)`},
-        {src: `url(./fonts/dana/woff2/dana-regular.woff2) format(woff2)`},
-        {src: `url(./fonts/dana/woff/dana-regular.woff) format(woff)`}
-      ]
+        {
+          src:
+            'url(./fonts/dana/eot/dana-regular.eot?#iefix) format(embedded-opentype)',
+        },
+        { src: 'url(./fonts/dana/woff2/dana-regular.woff2) format(woff2)' },
+        { src: 'url(./fonts/dana/woff/dana-regular.woff) format(woff)' },
+      ],
     },
     {
-      fontFamily: "budmo",
-      src: `url(./fonts/budmo.ttf)`,
+      fontFamily: 'budmo',
+      src: 'url(./fonts/budmo.ttf)',
     },
-   
   ],
 };
 
-export const setupGlobalStyles = () => {
+const setupGlobalStyles = () => {
   jss.setup(preset());
 
   const sheetsRegistry = new SheetsRegistry();
@@ -39,3 +41,4 @@ export const setupGlobalStyles = () => {
 
   return sheetsRegistry;
 };
+export default setupGlobalStyles;
