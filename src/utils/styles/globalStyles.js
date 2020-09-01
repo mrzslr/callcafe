@@ -30,7 +30,7 @@ const styles = {
   ],
 };
 
-const setupGlobalStyles = () => {
+export const setupGlobalStyles = () => {
   jss.setup(preset());
 
   const sheetsRegistry = new SheetsRegistry();
@@ -41,4 +41,3 @@ const setupGlobalStyles = () => {
 
   return sheetsRegistry;
 };
-export default setupGlobalStyles;

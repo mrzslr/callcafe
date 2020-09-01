@@ -15,8 +15,8 @@ const ProductItem = ({ classes, product }) => (
 );
 
 ProductItem.propTypes = {
-  classes: PropTypes.objectOf(PropTypes.object).isRequired,
-  product: PropTypes.objectOf(PropTypes.object).isRequired,
+  classes: PropTypes.object.isRequired,
+  product: PropTypes.object.isRequired,
 };
 
 export default injectSheet(styles)(ProductItem);

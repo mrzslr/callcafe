@@ -27,8 +27,8 @@ const CategoryMenu = ({
 };
 
 CategoryMenu.propTypes = {
-  classes: PropTypes.objectOf(PropTypes.object).isRequired,
-  menu: PropTypes.objectOf(PropTypes.object).isRequired,
+  classes: PropTypes.object.isRequired,
+  menu: PropTypes.array.isRequired,
   activeCategory: PropTypes.string.isRequired,
   onCategoryChanged: PropTypes.func.isRequired,
 };

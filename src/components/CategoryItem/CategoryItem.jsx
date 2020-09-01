@@ -34,8 +34,8 @@ const CategoryItem = ({
 };
 
 CategoryItem.propTypes = {
-  classes: PropTypes.objectOf(PropTypes.object).isRequired,
-  category: PropTypes.objectOf(PropTypes.object).isRequired,
+  classes: PropTypes.object.isRequired,
+  category: PropTypes.object.isRequired,
   selected: PropTypes.bool.isRequired,
   onCategoryItemClicked: PropTypes.func.isRequired,
 };

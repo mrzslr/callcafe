@@ -22,7 +22,7 @@ const ContentLoader = ({ classes, products }) => (
 );
 
 ContentLoader.propTypes = {
-  classes: PropTypes.objectOf(PropTypes.object).isRequired,
-  products: PropTypes.objectOf(PropTypes.array).isRequired,
+  classes: PropTypes.object.isRequired,
+  products: PropTypes.array.isRequired,
 };
 export default injectSheet(styles)(ContentLoader);
