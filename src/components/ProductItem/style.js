@@ -1,5 +1,3 @@
-import colors from 'utils/styles/colors';
-
 export default {
   container: {
     display: 'flex',
@@ -7,7 +5,6 @@ export default {
     width: '100%',
     height: 'auto',
     marginRight: '10px',
-    background: colors.productItemBg,
     color: 'black',
     borderRadius: '5px',
     counterIncrement: 'carousel-cell',
