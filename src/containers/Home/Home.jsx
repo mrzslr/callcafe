@@ -21,7 +21,7 @@ const Home = () => {
 
   const onCategoryMenuChanged = (activeKey) => {
     // food - hot - cold  - ...
-
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     setActiveCategory(activeKey);
     switch (activeKey) {
       case 'foods':
