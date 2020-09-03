@@ -18,7 +18,7 @@ const CategoryMenu = ({
           options={{
             groupCells: true,
             prevNextButtons: false,
-            pageDots: false,
+            pageDots: true,
           }}
         >
           {menu && menu.map((category) => (
