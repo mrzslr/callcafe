@@ -11,4 +11,7 @@ const Header = ({ classes }) => (
   </div>
 );
 
+Header.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
 export default injectSheet(styles)(Header);
