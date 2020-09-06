@@ -4,15 +4,15 @@ const tailedCoffees = [
     title: 'جینا',
     key: 'jinna',
     image: '/tailed_coffees/1.png',
-  description: '' ,
- },
+    description: '',
+  },
   {
     id: 2,
     title: 'فرنچ پرس',
     key: 'frenchpress',
-    image: '/tailed_coffees/1.png',
-  description: '' ,
- },
+    image: '/tailed_coffees/2.png',
+    description: '',
+  },
 ];
 
 export default tailedCoffees;

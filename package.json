@@ -55,6 +55,7 @@
     "jss-default-unit": "^8.0.2",
     "jss-extend": "^6.2.0",
     "jss-nested": "^6.0.1",
-    "jss-vendor-prefixer": "^8.0.1"
+    "jss-vendor-prefixer": "^8.0.1",
+    "prettier": "^2.1.1"
   }
 }

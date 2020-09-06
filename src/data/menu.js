@@ -4,7 +4,7 @@ export const menu = [
     title: 'قهوه',
     key: 'coffees',
     image: '/menu/coffee.svg',
- },
+  },
   {
     id: 2,
     title: 'طعم دهنده ها',

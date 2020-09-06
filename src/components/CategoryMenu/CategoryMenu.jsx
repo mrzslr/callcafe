@@ -9,7 +9,7 @@ const CategoryMenu = ({
   classes, menu, activeCategory, onCategoryChanged,
 }) => {
   const onCategoryItemClicked = (category) => {
-    onCategoryChanged(category.key);
+    onCategoryChanged(category);
   };
   return (
     <div className={classes.container}>
@@ -25,7 +25,7 @@ const CategoryMenu = ({
             <CategoryItem
               onCategoryItemClicked={onCategoryItemClicked}
               category={category}
-              selected={activeCategory === category.key}
+              selected={activeCategory.key === category.key}
               key={category.id}
             />
           ))}
@@ -38,7 +38,7 @@ const CategoryMenu = ({
 CategoryMenu.propTypes = {
   classes: PropTypes.object.isRequired,
   menu: PropTypes.array.isRequired,
-  activeCategory: PropTypes.string.isRequired,
+  activeCategory: PropTypes.object.isRequired,
   onCategoryChanged: PropTypes.func.isRequired,
 };
 export default injectSheet(styles)(CategoryMenu);

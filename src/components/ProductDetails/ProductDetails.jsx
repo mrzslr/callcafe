@@ -2,14 +2,11 @@ import React from 'react';
 import injectSheet from 'react-jss';
 import PropTypes from 'prop-types';
 import Dialog from '@material-ui/core/Dialog';
-import AppBar from '@material-ui/core/AppBar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import CloseIcon from '@material-ui/icons/Close';
-import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
 import Slide from '@material-ui/core/Slide';
 import Container from '@material-ui/core/Container';
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import { BASE_IMAGE_URL } from 'constants/endpoints';
 import styles from './style';
 
 const ProductDetails = ({
@@ -18,32 +15,41 @@ const ProductDetails = ({
   const handleClose = () => {
     onClosed();
   };
-  const Transition = React.forwardRef((props, ref) => <Slide direction="up" ref={ref} {...props} />);
+
+  const back = () => {
+    onClosed();
+  };
+  const Transition = React.forwardRef((props, ref) => (
+    <Slide direction="up" ref={ref} {...props} />
+  ));
   return (
     <div className={classes.container}>
       {show ? (
         <Dialog fullScreen open={show} onClose={handleClose} TransitionComponent={Transition}>
-          <AppBar className={classes.appBar}>
-            <Toolbar>
-              <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
-                <CloseIcon />
-              </IconButton>
-              <Typography variant="h6" className={classes.title}>
-                Sound
-              </Typography>
-              <Button autoFocus color="inherit" onClick={handleClose}>
-                save
-              </Button>
-            </Toolbar>
-          </AppBar>
           <Container>
-            <p>
-              {JSON.stringify(product)}
-            </p>
+
+            <img
+              className={classes.image}
+              src={BASE_IMAGE_URL + product.image}
+              alt={product.title}
+            />
+            <h1 className={classes.title}>{product.title}</h1>
+            <p className={classes.description}>{product.description}</p>
           </Container>
+
+          <BottomNavigation value={0} showLabels className={classes.navigationActions}>
+            <BottomNavigationAction
+              className={classes.navigationActionItemDisabled}
+              label="سفارش (به زودی)"
+            />
+            <BottomNavigationAction
+              className={classes.navigationActionItem}
+              label="بازگشت"
+              onClick={back}
+            />
+          </BottomNavigation>
         </Dialog>
       ) : null}
-
     </div>
   );
 };

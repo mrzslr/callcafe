@@ -12,5 +12,9 @@ export default {
     zIndex: '-1',
 
   },
+  categoryTitle: {
+    margin: 0,
+
+  },
 
 };

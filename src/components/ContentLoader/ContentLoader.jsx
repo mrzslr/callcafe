@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import styles from './style';
 
-const ContentLoader = ({ classes, products }) => {
+const ContentLoader = ({ classes, products, activeCategory }) => {
   const [productDetails, setProductDetails] = useState({ show: false, product: null });
 
   const showProduct = (product) => {
@@ -19,7 +19,7 @@ const ContentLoader = ({ classes, products }) => {
 
   return (
     <div align="center" className={classes.container}>
-      <h1>عنوان دسته</h1>
+      <h1 className={classes.categoryTitle}>{activeCategory.title}</h1>
       <Container>
         <Grid container spacing={3} alignItems="center">
 
@@ -30,12 +30,15 @@ const ContentLoader = ({ classes, products }) => {
           ))}
         </Grid>
       </Container>
-      <ProductDetails
-        show={productDetails.show}
-        product={productDetails.product}
-        onClosed={onProductDetailsClosed}
 
-      />
+      {productDetails.show ? (
+        <ProductDetails
+          show={productDetails.show}
+          product={productDetails.product}
+          onClosed={onProductDetailsClosed}
+        />
+      ) : null}
+
     </div>
   );
 };
@@ -43,5 +46,7 @@ const ContentLoader = ({ classes, products }) => {
 ContentLoader.propTypes = {
   classes: PropTypes.object.isRequired,
   products: PropTypes.array.isRequired,
+  activeCategory: PropTypes.object.isRequired,
+
 };
 export default injectSheet(styles)(ContentLoader);

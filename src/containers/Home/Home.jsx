@@ -16,14 +16,14 @@ import warmdrinks from 'data/warm_drinks';
 import React, { useState } from 'react';
 
 const Home = () => {
-  const [activeCategory, setActiveCategory] = useState(menu[0].key);
+  const [activeCategory, setActiveCategory] = useState(menu[0]);
   const [products, setProducts] = useState(coffees);
 
-  const onCategoryMenuChanged = (activeKey) => {
+  const onCategoryMenuChanged = (category) => {
     // food - hot - cold  - ...
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    setActiveCategory(activeKey);
-    switch (activeKey) {
+    setActiveCategory(category);
+    switch (category.key) {
       case 'foods':
         setProducts(foods);
 
@@ -80,7 +80,7 @@ const Home = () => {
 
   return (
     <div>
-      <ContentLoader products={products} />
+      <ContentLoader products={products} activeCategory={activeCategory} />
 
       <CategoryMenu
         menu={menu}
