@@ -1,25 +1,43 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Snapp!",
+  "name": "Snapp!",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+  "src": "https://passenger-pwa-cdn.snapp.ir/logos/square-minimal-144.png",
+  "sizes": "144x144",
+  "type": "image/png"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+  "src": "https://passenger-pwa-cdn.snapp.ir/logos/square-minimal-180.png",
+  "type": "image/png",
+  "sizes": "180x180"
     },
     {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+  "src": "https://passenger-pwa-cdn.snapp.ir/logos/square-minimal-192.png",
+  "type": "image/png",
+  "sizes": "192x192"
+    },
+    {
+  "src": "https://passenger-pwa-cdn.snapp.ir/logos/square-minimal-384.png",
+  "type": "image/png",
+  "sizes": "384x384"
+    },
+    {
+  "src": "https://passenger-pwa-cdn.snapp.ir/logos/square-minimal-512.png",
+  "type": "image/png",
+  "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "background_color": "#09DF70",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "scope": "/",
+  "scope_url": "/",
+  "start_url": "/",
+  "intent_filters": {
+  "scope_url_scheme": "http",
+  "scope_url_host": "localhost:3000",
+  "scope_url_path": "/"
+  },
+  "orientation": "portrait",
+  "theme_color": "#FFFFFF"
 }
