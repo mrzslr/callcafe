@@ -10,14 +10,14 @@ export const salads = [
     id: 2,
     title: 'سالاد سزار',
     key: 'sezarsalad',
-    image: '/salads/1.png',
+    image: '/salads/2.png',
     description: '',
   },
   {
     id: 3,
     title: 'سالاد کینوآ',
     key: 'kinoasalad',
-    image: '/salads/1.png',
+    image: '/salads/3.png',
     description: '',
   },
   {
